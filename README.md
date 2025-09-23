@@ -13,6 +13,9 @@ Esta API permite gestionar **usuarios, signos zodiacales y horóscopos**, con op
 
 ---
 
+## Instalación 
+- **git clone https://github.com/FerLuAyala/ayalaFernandaApi**
+  
 # Entrega parcial-1
 - **Ayala Fernanda**
 - **Aplicación Hibridas**
