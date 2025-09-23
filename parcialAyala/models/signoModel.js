@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 const mySchema = new Schema({
   name: {
     type: String,
-    required: true,
-    unique: true,
+    required: true,    
   },
   elemento: {
     type: String,
@@ -14,13 +13,11 @@ const mySchema = new Schema({
 
   fechaInicio: {
     type: Date,
-    required: true,
-    unique: true,
+    required: true,   
   },
   fechaFinal: {
     type: Date,
-    required: true,
-    unique: true,
+    required: true,    
   },
   icono:{
      type: String,

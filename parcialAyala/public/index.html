@@ -1,12 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h1>hola SOY TU api </h1>
-</head>
-<body>
-    
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Rest</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/api.png" type="image/png" />
+  </head>
+  <body>
+    <header class="text-white">
+      <h1>API Documentación</h1>
+    </header>
+    <main class="container">
+      <div class="row mt-2">
+        <div class="col-12 col-md-4">
+          <h2>Rutas de usuario</h2>
+          <ul class="list-group">
+            <span class="badge text-bg-info p-2">GET</span>
+            <li class="list-group-item list-group-item-info border border-info">
+              <a href="/api/users" target="_blank">/api/users</a> Ver lista de
+              usuarios
+            </li>
+            <span class="badge text-bg-success p-2">POST</span>
+            <li
+              class="list-group-item list-group-item-success border border-success"
+            >
+              <a href="/api/users" target="_blank">/api/users</a> Guardar un
+              usuario nuevo
+              <pre class="bg-light m-1 p-1">
+               <p>Ejemplo</p>          
+        {
+            "name": "Marcelo Suarez",
+            "fechaNac": "09-05-1960",
+            "email": "marcelo@example.com",
+            "password": "1236",
+        }
+              </pre>
+            </li>
+            <span class="badge text-bg-warning p-2">PUT</span>
+            <li
+              class="list-group-item list-group-item-warning border border-warning"
+            >
+              <a href="/api/users/:id" target="_blank">/api/users/:id</a>
+              Modificar usuario
+              <pre class="bg-light m-1 p-1">
+                <p>Ejemplo</p>                                 
+        {
+            "name": "Nombre-apellido",
+            "fechaNac": "xx-xx-xxxx",
+            "email": "mail@example.com",
+            "password": "xxxxx",
+        }
+              </pre>
+            </li>
+            <span class="badge text-bg-danger p-2">DELETE</span>
+            <li
+              class="list-group-item list-group-item-danger border border-danger"
+            >
+              <a href="/api/users/:id">/api/users/:id</a> Selecciona el id que
+              quieras eliminar
+            </li>
+           
+          </ul>
+        </div>
+        <div class="col-12 col-md-4">
+             <h2>Rutas de Signos</h2>
+            <ul class="list-group">
+            <span class="badge text-bg-info p-2">GET</span>
+            <li class="list-group-item list-group-item-info border border-info">
+              <a href="/api/signos" target="_blank">/api/signos</a> Ver lista de
+              usuarios find()
+            </li>
+            <span class="badge text-bg-success p-2">POST</span>
+            <li
+              class="list-group-item list-group-item-success border border-success"
+            >
+              <a href="/api/signos" target="_blank">/api/signos</a> Guardar un
+              usuario nuevo created()
+              <pre class="bg-light m-1 p-1">
+               <p>Ejemplo</p>          
+
+              </pre>
+            </li>
+            <span class="badge text-bg-warning p-2">PUT</span>
+            <li
+              class="list-group-item list-group-item-warning border border-warning"
+            >
+              <a href="/api/users/:signo" target="_blank">/api/signos/:signo</a>
+              Modificar usuario findByIdAndUpdate()
+              <pre class="bg-light m-1 p-1">
+                <p>Ejemplo</p>                                 
+{
+ "name": "Piscis",
+ "predicciones": "Hoy recibiras una noticia, 
+  que puede cambiar el rumbo del dia",
+}
+              </pre>
+            </li>
+            <span class="badge text-bg-danger p-2">DELETE</span>
+            <li
+              class="list-group-item list-group-item-danger border border-danger"
+            >
+              <a href="/api/users/:id">/api/signos/:id</a> Selecciona el id que
+              quieras eliminar findByIdAndDelete()
+            </li>
+           
+          </ul>
+        </div>
+         <div class="col-12 col-md-4">
+             <h2>Rutas de Horoscopos</h2>
+            <ul class="list-group">
+            <span class="badge text-bg-info p-2">GET</span>
+            <li class="list-group-item list-group-item-info border border-info">
+              <a href="/api/horoscopos" target="_blank">/api/horoscopos</a> Ver lista de
+              usuarios find()
+            </li>
+            <span class="badge text-bg-success p-2">POST</span>
+            <li
+              class="list-group-item list-group-item-success border border-success"
+            >
+              <a href="/api/horoscopos" target="_blank">/api/horoscopos</a> Guardar un
+              usuario nuevo created()
+              <pre class="bg-light m-1 p-1">
+               <p>Ejemplo</p>          
+{
+ "name": "Piscis",
+ "predicciones": "Hoy recibiras una noticia, 
+  que puede cambiar el rumbo del dia",
+}
+              </pre>
+            </li>
+            <span class="badge text-bg-warning p-2">PUT</span>
+            <li
+              class="list-group-item list-group-item-warning border border-warning"
+            >
+              <a href="/api/users/:horoscopos" target="_blank">/api/horoscopos/:id</a>
+              Modificar usuario findByIdAndUpdate()
+              <pre class="bg-light m-1 p-1">
+                <p>Ejemplo</p>                                 
+{
+ "name": "Piscis",
+ "predicciones": "Hoy recibiras una noticia, 
+  que puede cambiar el rumbo del dia",
+}
+              </pre>
+            </li>
+            <span class="badge text-bg-danger p-2">DELETE</span>
+            <li
+              class="list-group-item list-group-item-danger border border-danger"
+            >
+              <a href="/api/horoscopos/:id">/api/horoscopos/:id</a> Selecciona el id que
+              quieras eliminar findByIdAndDelete()
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark text-white">
+      <p>DV | Aplicaciones Híbridas | 2025</p>
+    </footer>
+  </body>
 </html>

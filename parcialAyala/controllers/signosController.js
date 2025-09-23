@@ -27,7 +27,7 @@ const postSignos = async (req, res) => {
     }
     const existeSigno = await SignoModel.findOne({ name });
     if (existeSigno) {
-      return res.status(400).json({ msg: "El email ya está registrado" });
+      return res.status(400).json({ msg: "El signo ya está registrado" });
     }
     const signo = new SignoModel({
       name,
@@ -59,12 +59,12 @@ const getSignos =async (req, res) => {
 
 const getSignoById = async (req, res) =>{
     try {
-        const name = req.params.name;
+        const id = req.params.id;
         //busca por name del signo , uso la expresion para que de name que se pasa no distinga entre mayusculas y minusculas
-       const signo = await SignoModel.findOne({ name: new RegExp(`^${name}$`, 'i') });
+        const signo = await SignoModel.findById(id);
 
-        if (name) {
-            res.status(200).json({msg:'Signo por nombre' , data: signo});
+        if (signo) {
+            res.status(200).json({msg:'el Id del Signo' , data: signo});
         } else {
             res.status(404).json({msg:'No se encontro el signo que buscas', data: {}})
         }
@@ -73,6 +73,18 @@ const getSignoById = async (req, res) =>{
         res.status(500).json({msg:'Tenemos un error :( en el servidor ', data: {}});
     }
 }
+const updateSignoById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const {  name,elemento,fechaInicio,fechaFinal,icono,caracteristicas,descripcion,} = req.body;       
+        const signo = await SignoModel.findByIdAndUpdate(id, { name,elemento,fechaInicio,fechaFinal,icono,caracteristicas,descripcion,});
+        console.log({signo});
+        res.status(202).json({msg: 'Signo Actualizado'});
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({msg:'Tenemos un error :( en el servidor ', data: {}});
+    }
+}
 
 
-export { postSignos, getSignos, getSignoById}
+export { postSignos, getSignos, getSignoById ,updateSignoById}

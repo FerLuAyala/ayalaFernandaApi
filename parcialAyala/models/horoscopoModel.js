@@ -13,6 +13,12 @@ const mySchema = new Schema({
     required: true,
     unique: true,
   },
+
+  fecha:{
+    type: Date,
+    required: true,
+    default: Date.now
+  }
 });
 
 const HoroscopoModel = mongoose.model("Horoscopo", mySchema);
