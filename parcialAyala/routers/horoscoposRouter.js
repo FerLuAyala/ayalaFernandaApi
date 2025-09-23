@@ -7,6 +7,7 @@ import {
   updateHorosById,
 }from '../controllers/horoscopoController.js';
 
+/*Esta tarea le corresponde solamente al admin*/
 const router = express.Router();
 router.get('/', getHoroscopo);
 router.post('/', postHoroscopo);
