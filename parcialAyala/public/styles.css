@@ -1,0 +1,114 @@
+/* ===== Estilos Generales ===== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #14011b;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ===== Encabezado ===== */
+header {
+  background: linear-gradient(135deg, #4105a3, #8e30f8);
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 15px solid #300250;
+  border-radius:0 0 25rem 25rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* ===== Contenido Principal ===== */
+main {
+  padding: 2rem 0;
+  box-shadow: 0 4px 8px rgba(159, 3, 231, 0.288);
+}
+
+h2 {
+  color: #e3e3e4;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #6500d8;
+  padding-bottom: 5px;
+  text-align: center;
+}
+span {
+    font-weight: 700;
+}
+
+/* ===== Lista de rutas ===== */
+.list-group {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.list-group-item {
+  transition: all 0.3s ease;
+
+}
+
+.list-group-item:hover {
+  
+  background: #f1f9ff;
+ 
+}
+
+/* ===== Badges ===== */
+.badge {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+/* ===== Ejemplos JSON ===== */
+pre {
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: "Fira Code", monospace;
+  overflow-x: auto;
+}
+
+pre p {
+  margin: 0;
+  font-weight: bold;
+  color: #444;
+}
+
+/* ===== Enlaces ===== */
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.col-12.col-md-4 {
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.col-12.col-md-4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background-color: rgba(108, 92, 231, 0.05); 
+  border: 1px solid #6c5ce7; 
+}
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem;  
+  background: #3f0252;
+  color: #f1f9ff;
+  border-radius:25rem 25rem 0 0;
+  font-size: 0.9rem;
+}

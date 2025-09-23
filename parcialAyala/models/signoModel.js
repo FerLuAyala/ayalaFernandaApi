@@ -14,6 +14,7 @@ const mySchema = new Schema({
   fechaInicio: {
     type: Date,
     required: true,   
+    
   },
   fechaFinal: {
     type: Date,
