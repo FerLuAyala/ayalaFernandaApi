@@ -1,4 +1,4 @@
-# 🌌 API REST - Usuarios | Signos | Horóscopos
+# 🌌 API ZODIACO - Usuarios | Signos | Horóscopos
 
 Esta API permite gestionar **usuarios, signos zodiacales y horóscopos**, con operaciones CRUD (crear, leer, actualizar, eliminar).
 
