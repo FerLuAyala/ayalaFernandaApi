@@ -29,7 +29,11 @@ main {
   box-shadow: 0 4px 8px rgba(159, 3, 231, 0.288);
 }
 
-h2 {
+h2{
+    color:#e0cb06;
+    font-size: 2rem;
+}
+h3 {
   color: #e3e3e4;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -40,7 +44,13 @@ h2 {
 span {
     font-weight: 700;
 }
-
+p{
+    color: #d2d2d3;
+    font-size: 1.5rem;
+}
+em{
+  color: #e0cb06;
+}
 /* ===== Lista de rutas ===== */
 .list-group {
   border-radius: 10px;
@@ -78,6 +88,7 @@ pre p {
   margin: 0;
   font-weight: bold;
   color: #444;
+  font-size: 0.85rem;
 }
 
 /* ===== Enlaces ===== */

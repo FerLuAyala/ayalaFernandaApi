@@ -1,5 +1,5 @@
 import HoroscopoModel from "../models/horoscopoModel.js";
-
+// Crear: Create()
 const postHoroscopo = async (req, res) => {
   try {
     const { name, prediccion } = req.body;
@@ -21,7 +21,7 @@ const postHoroscopo = async (req, res) => {
     res.status(500).json({ msg: "No se pudo guardar el Horoscopo" });
   }
 };
-
+// Lista de horóscopo: find()
 const getHoroscopo = async (req, res) => {
   try {
     const horoscopos = await HoroscopoModel.find();
@@ -31,7 +31,7 @@ const getHoroscopo = async (req, res) => {
     res.status(500).json({ msg: "No se pudo obtener la lista de Horoscopos" });
   }
 };
-
+// Horoscopo por ID: findById()
 const getHoroscopoById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -49,7 +49,25 @@ const getHoroscopoById = async (req, res) => {
       .json({ msg: "Tenemos un error :( en el servidor ", data: {} });
   }
 };
+// Horoscopo por name: findOne({ name: { $regex: `^${name}$`, $options: 'i' } })
+const getHoroscopoByName = async (req, res) =>{
+    try {
+        const name = req.params.name;
+        //busca por name del signo , uso la expresion para que de name que se pasa no distinga entre mayusculas y minusculas
+        //$regex $options
+         const signo = await HoroscopoModel.findOne({ name: { $regex: `^${name}$`, $options: 'i' } });
 
+        if (signo) {
+            res.status(200).json({msg:`Resultado de busqueda Signo:  ${signo.name} ` , data: signo});
+        } else {
+            res.status(404).json({msg:'No se encontro el signo que buscas', data: {}})
+        }
+    } catch (error) {
+         console.error(error);
+        res.status(500).json({msg:'Tenemos un error :( en el servidor ', data: {}});
+    }
+}
+//Eliminar horoscopo por ID:findByIdAndDelete()
 const deleteHoroscopoById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -64,7 +82,7 @@ const deleteHoroscopoById = async (req, res) => {
     res.status(500).json({ msg: "Tenemos un error :( en el servidor ", data: {} });
   }
 };
-
+// Actualizar horoscopo por ID: findByIdAndUpdate()
 const updateHorosById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -88,6 +106,7 @@ export {
   postHoroscopo,
   getHoroscopo,
   getHoroscopoById,
+  getHoroscopoByName,
   deleteHoroscopoById,
   updateHorosById,
 };

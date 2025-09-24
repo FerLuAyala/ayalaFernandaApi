@@ -21,14 +21,10 @@ db.once('open', () =>
 
 const app = express();
 
+//express
 app.use(express.json());
 app.use('/', express.static('public'));
 
-
-app.use((req, res, next) => {
-  console.log("Estoy interceptando todo 🚨", req.method, req.url);
-  next();
-});
 
 app.get('/', (req, res) => {
   res.send('Servidor activo');
@@ -37,7 +33,7 @@ app.get('/', (req, res) => {
 
 routerAPI(app); 
 
-
+//escuchando
 app.listen(port, () => {
     
     console.log(`Servidor escuchando en http://localhost:${port}`);

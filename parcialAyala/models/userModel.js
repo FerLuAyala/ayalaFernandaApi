@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
+//solo el admin , indicará su rol
 const mySchema = new Schema({
   name: {
     type: String,
