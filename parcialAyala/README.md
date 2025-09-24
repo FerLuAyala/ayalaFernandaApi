@@ -13,7 +13,7 @@ Esta API permite gestionar **usuarios, signos zodiacales y horóscopos**, con op
 
 ---
 # Instalación
-- **https://github.com/FerLuAyala/ayalaFernandaApi.git**
+- **https://github.com/FerLuAyala/ayalaFernandaApi/tree/main/parcialAyala**
 - **npm start**
 
 
